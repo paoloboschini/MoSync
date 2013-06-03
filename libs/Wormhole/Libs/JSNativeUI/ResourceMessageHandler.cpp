@@ -224,7 +224,8 @@ namespace Wormhole
 	 */
 	void ResourceMessageHandler::error(Downloader* downloader, int code)
 	{
-		//Cancled
+		lprintfln(">>> Error downloading resource!!! <<<");
+		mWebView->callJS("mosync.resource.imageDownloadError()");
 	}
 
 	/**
